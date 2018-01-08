@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>STUDENT DETAILS</title>
+  </head>
+  <body>
+    <div class="" aling="center">
+      {% if s_det %}
+      <p><h3>USN : {{s_det.usn}}</h3></p>
+      <p><h3>First Name : {{s_det.first_name}}</h3></p>
+      <p><h3>Last Name : {{s_det.last_name}}</h3></p>
+      {% endif %}
+      <div>
+        {% if s_marks %}
+        <hr>
+        <h4>Marks</h4>
+        <p><h5>Sem 1 : {{s_marks.sem_1}}</h5></p>
+        <p><h5>Sem 2 : {{s_marks.sem_2}}</h5></p>
+        <p><h5>Sem 3 : {{s_marks.sem_3}}</h5></p>
+        <p><h5>Sem 4 : {{s_marks.sem_4}}</h5></p>
+        <p><h5>Sem 5 : {{s_marks.sem_5}}</h5></p>
+        <p><h5>Sem 6 : {{s_marks.sem_6}}</h5></p>
+        <p><h5>Sem 7 : {{s_marks.sem_7}}</h5></p>
+        <p><h5>Sem 8 : {{s_marks.sem_8}}</h5></p>
+        {% endif %}
+      </div>
+      <div>
+        {% for key,value in avg_dict.items %}
+          <p><h4>Average : {{value}}</h4></p>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

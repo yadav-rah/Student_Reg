@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>STUDENT DATABASE</title>
+  </head>
+  <body>
+    <h2>Enter Roll Number To View Student Marks</h2>
+    <form method="post" action="/search/">
+      Search: <input type="text" name="usn" placeholder="Search" value="{{ query }}">
+      <input type="submit" value="Search">
+      {% csrf_token %}
+    </form>
+    <a href="/"> <h3>Main Page</h3></a>
+  </body>
+</html>
